@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', path='/result.css') }}">
+    <script src="/static/js/main.js" defer></script>
+    <title>CineHeist</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Plot Matrimony</h1>
+        </header>
+        
+        <section id="results" class="box">
+            <h2>Results</h2>
+            <div class="movie-list" id="movieList">
+                {% for movie in results %}
+                <div class="movie-item">
+                    <h3>{{ movie.title }}</h3>
+                    <p><strong>Synopsis:</strong> {{ movie.synopsis }}</p>
+                    <p><strong>Language:</strong> {{ movie.language }}</p>
+                    <p><strong>Year:</strong> {{ movie.year }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <footer class="box">
+            <p>&copy; 2024 CineHeist</p>
+        </footer>
+    </div>
+</body>
+</html>

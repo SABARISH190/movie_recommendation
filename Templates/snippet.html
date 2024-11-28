@@ -1,0 +1,15 @@
+<div>
+    {% if movies %}
+        <h2>Recommended Movies:</h2>
+        <ul>
+            {% for movie in movies %}
+                <li>
+                    <h3>{{ movie.title }}</h3>
+                    <p>{{ movie.description }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No similar movies found!</p>
+    {% endif %}
+</div>

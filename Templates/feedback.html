@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', path='/feedback.css') }}">
+    <script src="/static/js/main.js" defer></script>
+    <title>Feedback Page</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Feedback Page</h1>
+        </header>
+
+        <section id="feedback-form" class="box">
+            <h2>Leave Your Feedback</h2>
+            <textarea id="feedbackText" placeholder="Write your feedback here..." rows="6"></textarea>
+            <button onclick="submitFeedback()">Submit Feedback</button>
+        </section>
+
+        <section id="previous-feedback" class="box">
+            <h2>Previous Feedback</h2>
+            <div id="feedbackList">
+                <!-- Previous feedback will be dynamically added here -->
+                <div class="feedback-item">
+                    <p><strong>User:</strong> John Doe</p>
+                    <p>This movie recommendation system is fantastic! I found exactly what I was looking for.</p>
+                </div>
+                <div class="feedback-item">
+                    <p><strong>User:</strong> Jane Smith</p>
+                    <p>Great selection of movies! However, I would love to see more options in the horror genre.</p>
+                </div>
+                <!-- More feedback items can be added dynamically -->
+            </div>
+        </section>
+
+        <footer class="box">
+            <p>&copy; 2024 CineHeist</p>
+        </footer>
+    </div>
+    <script src="/static/js/main.js"></script>
+    
+</body>
+</html>
